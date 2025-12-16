@@ -146,7 +146,7 @@ Examples:
 > If catkin build report errors: `Unable to find either executable 'empy' or Python module 'em'`, run `catkin config -DPYTHON_EXECUTABLE=/usr/bin/python3` before `catkin build`
 
 ## My compilation process record
-OS: Ubuntu 22.04
+OS: Ubuntu 22.04  
 ROS: ROS2 Humble
 ```bash
 # ros2 humble install: https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Install-Binary.html
