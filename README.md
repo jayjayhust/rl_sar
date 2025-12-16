@@ -145,6 +145,29 @@ Examples:
 > [!TIP]
 > If catkin build report errors: `Unable to find either executable 'empy' or Python module 'em'`, run `catkin config -DPYTHON_EXECUTABLE=/usr/bin/python3` before `catkin build`
 
+## My compilation process record
+```bash
+# ros2 humble install: https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Install-Binary.html
+# issue1(xacro path related): ros2 humble env load(dont use '. ~/ros2_humble/ros2-linux/setup.bash')
+source /opt/ros/humble/setup.bash
+# issue2: TypeError: canonicalize_version() got an unexpected keyword argument 'strip_trailing_zero'
+pip install --upgrade packaging
+# ros2 humble dependency for rl_sar
+sudo apt update
+ls /opt/ros/
+export ROS_DISTRO=humble
+sudo apt install \
+    ros-$ROS_DISTRO-teleop-twist-keyboard \
+    ros-$ROS_DISTRO-ros2-control \
+    ros-$ROS_DISTRO-ros2-controllers \
+    ros-$ROS_DISTRO-control-toolbox \
+    ros-$ROS_DISTRO-robot-state-publisher \
+    ros-$ROS_DISTRO-joint-state-publisher-gui \
+    ros-$ROS_DISTRO-gazebo-ros2-control \
+    ros-$ROS_DISTRO-gazebo-ros-pkgs \
+    ros-$ROS_DISTRO-xacro
+```
+
 ## Running
 
 In the following text, **\<ROBOT\>/\<CONFIG\>** is used to represent different environments, such as `go2/himloco` and `go2w/robot_lab`.
