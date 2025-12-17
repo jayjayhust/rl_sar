@@ -168,6 +168,7 @@ sudo apt install \
     ros-$ROS_DISTRO-gazebo-ros2-control \
     ros-$ROS_DISTRO-gazebo-ros-pkgs \
     ros-$ROS_DISTRO-xacro
+./build.sh
 ```
 
 ## Running
